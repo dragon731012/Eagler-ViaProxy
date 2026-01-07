@@ -1,0 +1,98 @@
+[03:16:20] [main/INFO] (ViaProxy) Initializing ViaProxy CLI v3.4.8 (git-ViaProxy-3.4.8:d867634) (Injected using Launcher Agent)...
+[03:16:20] [main/INFO] (ViaProxy) Using java version: OpenJDK 64-Bit Server VM 25.0.1 (Microsoft) on Linux
+[03:16:20] [main/INFO] (ViaProxy) Available memory (bytes): 2084569088
+[03:16:20] [main/INFO] (ViaProxy) Working directory: /workspaces/Eagler-ViaProxy
+[03:16:20] [main/DEBUG] (io.netty.util.internal.logging.InternalLoggerFactory) Using SLF4J as the default logging framework
+[03:16:20] [main/DEBUG] (io.netty.util.ResourceLeakDetector) -Dio.netty.leakDetection.level: simple
+[03:16:20] [main/DEBUG] (io.netty.util.ResourceLeakDetector) -Dio.netty.leakDetection.targetRecords: 4
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent0) Java version: 25
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent0) -Dio.netty.noUnsafe: false
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent0) sun.misc.Unsafe: unavailable (io.netty.noUnsafe=true by default on Java 25+)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent0) java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) maxDirectMemory: 2084569088 bytes (maybe)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) -Dio.netty.maxDirectMemory: -1 bytes
+[03:16:20] [main/DEBUG] (io.netty.util.internal.CleanerJava9) java.nio.ByteBuffer.cleaner(): unavailable
+java.lang.UnsupportedOperationException: sun.misc.Unsafe unavailable
+	at io.netty.util.internal.CleanerJava9.<clinit>(CleanerJava9.java:70)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:198)
+	at net.raphimc.viaproxy.ViaProxy.loadNetty(ViaProxy.java:315)
+	at net.raphimc.viaproxy.ViaProxy.injectedMain(ViaProxy.java:213)
+	at net.raphimc.viaproxy.ViaProxy.main(ViaProxy.java:102)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.CleanerJava24Linker) java.nio.ByteBuffer.cleaner(): available
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) -Dio.netty.noPreferDirect: false
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) -Dio.netty.jfr.enabled: true
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) java.lang.invoke.VarHandle: available
+[03:16:20] [main/DEBUG] (io.netty.util.internal.PlatformDependent) -Dio.netty.varHandle.enabled: true
+[03:16:20] [main/DEBUG] (io.netty.util.concurrent.GlobalEventExecutor) -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+[03:16:20] [main/DEBUG] (io.netty.util.internal.InternalThreadLocalMap) -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[03:16:20] [main/DEBUG] (io.netty.util.internal.InternalThreadLocalMap) -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[03:16:20] [main/INFO] (ViaProxy) Loaded plugin 'MiniConnect' by Lenni0451 (v1.0.0-SNAPSHOT)
+[03:16:20] [main/INFO] (ViaProxy) Loaded plugin 'ViaProxyEagUtils' by ayunami2000 (v1.0)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.NativeLibraryLoader) -Dio.netty.native.workdir: /tmp (io.netty.tmpdir)
+[03:16:20] [main/DEBUG] (io.netty.util.internal.NativeLibraryLoader) -Dio.netty.native.deleteLibAfterLoading: true
+[03:16:20] [main/DEBUG] (io.netty.util.internal.NativeLibraryLoader) -Dio.netty.native.tryPatchShadedId: true
+[03:16:20] [main/DEBUG] (io.netty.util.internal.NativeLibraryLoader) -Dio.netty.native.detectNativeLibraryDuplicates: true
+[03:16:20] [main/DEBUG] (io.netty.util.internal.NativeLibraryLoader) Successfully loaded the library /tmp/libnetty_transport_native_epoll_x86_6416333067477320343360.so
+[03:16:21] [main/DEBUG] (io.netty.util.NetUtil) -Djava.net.preferIPv4Stack: false
+[03:16:21] [main/DEBUG] (io.netty.util.NetUtil) -Djava.net.preferIPv6Addresses: false
+[03:16:21] [main/DEBUG] (io.netty.util.NetUtilInitializations) Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[03:16:21] [main/DEBUG] (io.netty.util.NetUtil) /proc/sys/net/core/somaxconn: 4096
+[03:16:21] [main/DEBUG] (io.netty.channel.kqueue.KQueue) KQueue support is not available
+java.lang.ExceptionInInitializerError
+	at io.netty.channel.kqueue.KQueue.<clinit>(KQueue.java:38)
+	at net.raphimc.netminecraft.util.TransportType.<clinit>(TransportType.java:42)
+	at net.raphimc.netminecraft.netty.connection.NetServer.bind(NetServer.java:58)
+	at net.lenni0451.miniconnect.Main.onEnable(Main.java:40)
+	at net.raphimc.viaproxy.plugins.ViaProxyPlugin.enable(ViaProxyPlugin.java:38)
+	at net.raphimc.viaproxy.plugins.PluginManager.enablePlugin(PluginManager.java:160)
+	at net.raphimc.viaproxy.plugins.PluginManager.loadPlugins(PluginManager.java:91)
+	at net.raphimc.viaproxy.plugins.PluginManager.<init>(PluginManager.java:52)
+	at net.raphimc.viaproxy.ViaProxy.injectedMain(ViaProxy.java:217)
+	at net.raphimc.viaproxy.ViaProxy.main(ViaProxy.java:102)
+Caused by: java.lang.IllegalStateException: Only supported on OSX/BSD
+	at io.netty.channel.kqueue.Native.loadNativeLibrary(Native.java:159)
+	at io.netty.channel.kqueue.Native.<clinit>(Native.java:76)
+	... 10 more
+[03:16:21] [main/DEBUG] (io.netty.util.internal.NativeLibraryLoader) Successfully loaded the library /tmp/libnetty_transport_native_io_uring42_x86_6411712205568079313768.so
+[03:16:21] [main/DEBUG] (io.netty.channel.uring.IoUring) IoUring support is available using kernel 6.8.0-1030-azure: CQE_F_SOCK_NONEMPTY_SUPPORTED=true, SPLICE_SUPPORTED=true, ACCEPT_NO_WAIT_SUPPORTED=false, ACCEPT_MULTISHOT_SUPPORTED=true, POLL_ADD_MULTISHOT_SUPPORTED=true, RECV_MULTISHOT_SUPPORTED=true, IORING_RECVSEND_BUNDLE_SUPPORTED=false, REGISTER_IOWQ_MAX_WORKERS_SUPPORTED=true, SETUP_SUBMIT_ALL_SUPPORTED=true, SETUP_CQE_MIXED_SUPPORTED=false, SETUP_CQ_SIZE_SUPPORTED=true, SETUP_SINGLE_ISSUER_SUPPORTED=true, SETUP_DEFER_TASKRUN_SUPPORTED=true, SETUP_NO_SQARRAY_SUPPORTED=true, REGISTER_BUFFER_RING_SUPPORTED=true, REGISTER_BUFFER_RING_INC_SUPPORTED=false, SEND_ZC_SUPPORTED=true, SENDMSG_ZC_SUPPORTED=true
+[03:16:21] [main/DEBUG] (io.netty.channel.MultithreadEventLoopGroup) -Dio.netty.eventLoopThreads: 4
+[03:16:21] [main/DEBUG] (io.netty.util.internal.PlatformDependent) org.jctools-core.MpscChunkedArrayQueue: unavailable
+[03:16:21] [main/DEBUG] (io.netty.channel.DefaultChannelId) -Dio.netty.processId: 14052 (auto-detected)
+[03:16:21] [main/DEBUG] (io.netty.channel.DefaultChannelId) -Dio.netty.machineId: 00:22:48:ff:fe:26:61:09 (auto-detected)
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.numHeapArenas: 4
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.numDirectArenas: 4
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.pageSize: 8192
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.maxOrder: 9
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.chunkSize: 4194304
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.smallCacheSize: 256
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.normalCacheSize: 64
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.cacheTrimInterval: 8192
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.useCacheForAllThreads: false
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[03:16:21] [main/DEBUG] (io.netty.buffer.PooledByteBufAllocator) -Dio.netty.allocator.disableCacheFinalizersForFastThreadLocalThreads: false
+[03:16:21] [main/DEBUG] (io.netty.buffer.ByteBufUtil) -Dio.netty.allocator.type: pooled
+[03:16:21] [main/DEBUG] (io.netty.buffer.ByteBufUtil) -Dio.netty.threadLocalDirectBufferSize: 0
+[03:16:21] [main/DEBUG] (io.netty.buffer.ByteBufUtil) -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[03:16:21] [main/DEBUG] (io.netty.bootstrap.ChannelInitializerExtensions) -Dio.netty.bootstrap.extensions: null
+[03:16:21] [main/INFO] (ViaProxy) Enabled plugin 'MiniConnect'
+[03:16:21] [main/INFO] (ViaProxy) Enabled plugin 'ViaProxyEagUtils'
+[03:16:21] [Via-Mappingloader-1/INFO] (ViaVersion) Loading block connection mappings ...
+[03:16:22] [main/INFO] (ViaBackwards) Loading translations...
+[03:16:22] [main/INFO] (ViaBackwards) Registering protocols...
+[03:16:23] [main/INFO] (ViaRewind) Registering protocols...
+[03:16:23] [main/DEBUG] (io.netty.channel.nio.NioIoHandler) -Dio.netty.noKeySetOptimization: false
+[03:16:23] [main/DEBUG] (io.netty.channel.nio.NioIoHandler) -Dio.netty.selectorAutoRebuildThreshold: 512
+[03:16:23] [main/INFO] (ViaBedrock) Started resource pack HTTP server on http://127.0.0.1:35069/
+[03:16:23] [main/INFO] (ViaVersion) ViaVersion detected lowest supported version by the proxy: 1.7.2-1.7.5 (4)
+[03:16:23] [main/INFO] (ViaVersion) Highest supported version by the proxy: 1.21.11 (774)
+[03:16:24] [main/INFO] (ViaProxy) ViaProxy started successfully!
+[03:16:24] [main/INFO] (ViaProxy) Starting proxy server
+[03:16:24] [main/INFO] (ViaProxy) Binding proxy server to 0.0.0.0:25568
+[03:16:25] [Via-Mappingloader-2/DEBUG] (io.netty.buffer.AbstractByteBuf) -Dio.netty.buffer.checkAccessible: true
+[03:16:25] [Via-Mappingloader-2/DEBUG] (io.netty.buffer.AbstractByteBuf) -Dio.netty.buffer.checkBounds: true
+[03:16:25] [Via-Mappingloader-2/DEBUG] (io.netty.util.ResourceLeakDetectorFactory) Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@425c63b5
+[03:16:26] [Via Async Scheduler 0/INFO] (ViaVersion) Finished mapping loading, shutting down loader executor.
