@@ -1,1 +1,1 @@
-java -jar ViaProxy-3.4.8.jar config viaproxy.yml
+java -jar ViaProxy-3.4.8.jar cli
